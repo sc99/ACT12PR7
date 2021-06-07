@@ -23,7 +23,12 @@ function handleError(err,message){
 function loadProlog(){
     session = pl.create();
     session.consult("diagnostico.pl", {
-        success: function(){ successMessage('Prolog','Conexión realizada exitosamente')},
+        success: function(){ successMessage('Prolog','Conexión realizada exitosamente a diagnostico')},
+        error: function(err){ handleError(err,'Ocurrió un error al cargar la conexión')}
+    });
+    
+    session.consult("BaseConocimientos.pl", {
+        success: function(){ successMessage('Prolog','Conexión realizada exitosamente a la base de conocimiento')},
         error: function(err){ handleError(err,'Ocurrió un error al cargar la conexión')}
     });
 }
