@@ -1,2 +1,2 @@
-Se debe agregar el archivo con el código de la práctica de diagnóstico con el nombre 'diagnostico.pl' y se debe ubicar en la misma ubicación que el resto de archivos.
+Se deben mezclar ambos archivos prolog en uno solo que deberá ser llamado 'target.pl'.
 Para que el funcionamiento sea correcto se deben poner todos los archivos en un servidor web. Basta con instalar Apache y colocarlos en el directorio www/html.
