@@ -11,12 +11,15 @@
     <script src="core.js"></script>
 </head>
 <body onload="loadProlog()">
-    <h1>Meta</h1>
-    <p>Presiona Shift + Enter cuando quieras mostrar más de un resultado después de ejecutar una meta.</p>
-    <input type="text" id="goalInput" />
+    <h1>Diagnóstico Médico</h1>
+    <div id="diagnosis"></div>
+    <div id="syntomsHeader"></div>
+    <div id="justificationHeader"></div>
+    <ul id="syntoms">
+    </ul>
     <br><br>
-    <button id="goalButton" onclick="runGoal()">Ejecutar</button>
+    <button id="goalButton" onclick="startDiagnosis()">Iniciar diagnóstico</button>
     <br><br>
-    <div id="prologResult"></div>
+    <button id="resetDiagnosisButton" onclick="resetMedicalDiagnosisApp()">Reiniciar</button>
 </body>
 </html>
