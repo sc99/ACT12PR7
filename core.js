@@ -42,7 +42,7 @@ var writeSyntom = function(syntom){
 function showSyntoms(){
     $("#syntoms").html("");
     syntoms.forEach(syntom => {
-        $("#syntoms").append("<li>"+syntom+"</li>"); 
+        $("#syntoms").append("<li class='fs-4 fst-italic list-group-item'>"+syntom+"</li>"); 
     });
 }
 

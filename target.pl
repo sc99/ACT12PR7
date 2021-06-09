@@ -68,7 +68,7 @@ pregunta_sobre(Diagnosis,Sintoma,Reply):-
 process(_Diagnosis,Sintoma,si,si):- asserta(conocido(Sintoma)).
 process(_Diagnosis,Sintoma,no,no):- asserta(conocido(is_false(Sintoma))).
 process(Diagnosis,Sintoma,porque,Reply):- 
-          atom_concat('Estoy investigando la hipotesis siguiente: ',Diagnosis, T1),
+          atom_concat('Estoy investigando la hipótesis siguiente: ',Diagnosis, T1),
           atom_concat(T1,'.',T2),
           atom_concat(T2,'\n Para esto necesito saber si: ',T3),
           atom_concat(T3,Sintoma,T4),
@@ -104,7 +104,7 @@ asegura_respuesta_si_o_no(_,Respuesta):-
 actua_consecuentemente(_Diagnosis ,no).
 actua_consecuentemente(Diagnosis,si):- conocimiento(Diagnosis,ListaDeSintomas),
           prop(addJustifyDiagnosisHeader,AddJustifyDiagnosisHeader),
-          apply(AddJustifyDiagnosisHeader,['Se determino este diagnostico porque se encontraron los siguentes sintomas: '],_),
+          apply(AddJustifyDiagnosisHeader,['Se determinó este diagnóstico porque se encontraron los siguentes síntomas: '],_),
           %alert(''),
           escribe_lista_de_sintomas(ListaDeSintomas).
 

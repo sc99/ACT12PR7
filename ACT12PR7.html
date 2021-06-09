@@ -9,17 +9,29 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
     <script src="jquery-min-3.0.0.js"></script>
     <script src="core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body onload="loadProlog()">
-    <h1>Diagnóstico Médico</h1>
-    <div id="diagnosis"></div>
-    <div id="syntomsHeader"></div>
-    <div id="justificationHeader"></div>
-    <ul id="syntoms">
-    </ul>
-    <br><br>
-    <button id="goalButton" onclick="startDiagnosis()">Iniciar diagnóstico</button>
-    <br><br>
-    <button id="resetDiagnosisButton" onclick="resetMedicalDiagnosisApp()">Reiniciar</button>
+    <div class="container mt-5">
+        <div class="page-header">
+            <p class="h1 text-center">Diagnóstico Médico</p>
+        </div>
+        <div class="jumbotron jumbotron-fluid">
+            
+            <div id="diagnosis" class="fs-2 fw-bold mt-2"></div>
+            <div id="syntomsHeader" class="fs-3"></div>
+            <div id="justificationHeader" class="fs-4 mt-4 mb-4"></div>
+            <ul id="syntoms" class="list-group">
+                <li class="fs-5 fst-italic list-group-item"></li>
+            </ul>
+            <br><br>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary btn-lg" id="goalButton" onclick="startDiagnosis()">Iniciar diagnóstico</button>
+                <button type="button" class="btn btn-secondary btn-lg" id="resetDiagnosisButton" onclick="resetMedicalDiagnosisApp()">Reiniciar</button>        
+            </div>
+        </div>
+    
+    </div>
 </body>
 </html>
